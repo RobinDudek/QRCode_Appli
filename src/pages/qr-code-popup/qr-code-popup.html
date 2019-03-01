@@ -1,0 +1,25 @@
+<!--
+  Generated template for the QrCodePopupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>QRCodePopup</ion-title>
+  </ion-navbar>
+  <ion-navbar>
+    <ion-title>QR Code - {{code?.text}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="shareQRCode()">
+        <ion-icon name="share"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <img *ngIf="shareQRCode()" width="100%" [src]="generated" />
+</ion-content>

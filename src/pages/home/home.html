@@ -3,16 +3,18 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>Génération d'un QR Code</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <h3>Robin DUDEK - QR Code App</h3>
+  <button ion-button secondary (click)="scanQRCodeFromCamera()" block icon-start>
+    <ion-icon name="camera"></ion-icon>
+    Scanner depuis l'appareil photo
+  </button>  
+  <button ion-button secondary (click)="scanQRCodeFromFiles()" block>
+    <ion-icon name="images"></ion-icon>
+    Scanner depuis un fichier existant
+  </button>
 </ion-content>
